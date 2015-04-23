@@ -232,7 +232,7 @@ sub as_data {
 		my $kid_data = $kid->as_data($ctx);
 		push( @{ $data->{children} }, $kid_data ) if $kid_data;
 	}
-	return ($data->{url} || @{$data->{children}}) ? $data : undef;
+	return ($data->{url} || (exists $data->{children} && @{$data->{children}})) ? $data : undef;
 } ## end sub as_data
 
 sub stringify {
