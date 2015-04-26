@@ -52,29 +52,29 @@ my $nav_data = $nav->as_data;
 #warn "Dump: \n" . p($nav_data) . "Done!\n";
 
 my $expected_items = [
-	{ path => 'item/one', label => 'Item One', order => 0, url => 'one.html' },
-	{ path => 'item/two', label => 'Item Two', order => 0, url => 'two.html' },
+	{ path => 'item/one', label => 'Item One', order => 0, is_active => 0, dom_id => undef, description => undef, icon => undef, url => 'one.html', css_classes=>[] },
+	{ path => 'item/two', label => 'Item Two', order => 0, is_active => 0, dom_id => undef, description => undef, icon => undef, url => 'two.html', css_classes=>[] },
 	{
 		path     => 'item/three',
 		label    => 'Item Three',
-		order    => 0,
-		url      => '',
+		order    => 0,is_active => 0, 
+		dom_id => undef, description => undef, icon => undef, url      => '', css_classes=>[],
 		children => [
-			{ path => 'orange', label => 'Item Orange', order => 0, url => 'orange.html' },
-			{ path => 'banana', label => 'Item Banana', order => 0, url => 'banana.html' },
+			{ path => 'orange', label => 'Item Orange', order => 0, is_active => 0, dom_id => undef, description => undef, icon => undef, url => 'orange.html', css_classes=>[] },
+			{ path => 'banana', label => 'Item Banana', order => 0, is_active => 0, dom_id => undef, description => undef, icon => undef, url => 'banana.html', css_classes=>[] },
 		]
 	}, {
 		path     => 'item/four',
 		label    => 'Item Four',
-		order    => 0,
-		url      => '',
+		order    => 0,is_active => 0, 
+		dom_id => undef, description => undef, icon => undef, url      => '', css_classes=>[],
 		children => [{
 				path     => 'apple',
 				label    => 'Item Apple',
-				order    => 0,
-				url      => '',
+				order    => 0,is_active => 0, 
+				dom_id => undef, description => undef, icon => undef, url      => '', css_classes=>[],
 				children => [
-					{ path => 'pear', label => 'Item Pear', order => 0, url => 'pear.html' },
+					{ path => 'pear', label => 'Item Pear', order => 0, is_active => 0, dom_id => undef, description => undef, icon => undef, url => 'pear.html', css_classes=>[] },
 				]
 			},
 		]
