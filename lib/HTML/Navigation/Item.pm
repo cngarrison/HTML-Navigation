@@ -33,10 +33,15 @@ has title => (
 
 has description => (
 	is  => 'rw',
-	isa => 'Str|Undef',
+	isa => 'Str|CodeRef|Undef',
 );
 
 has icon => (
+	is  => 'rw',
+	isa => 'Str|Undef',
+);
+
+has category => (
 	is  => 'rw',
 	isa => 'Str|Undef',
 );
@@ -246,10 +251,11 @@ sub as_data {
 		label       => $self->label,
 		order       => $self->order,
 		icon        => $self->icon,
-		description => $self->description,
+		category    => $self->category,
+		description => ref $self->description ? $self->description->($ctx) : $self->description,
 		css_classes => $self->css_classes,
 		dom_id      => $self->dom_id,
-		url => ref $url ? $url->as_string : $url,
+		url         => ref $url ? $url->as_string : $url,
 	};
 	$data->{children} = [] if $self->has_children;
 
