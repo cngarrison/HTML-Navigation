@@ -4,7 +4,7 @@ HTML::Navigation - Create items (menus) representing web navigation elements, ou
 
 # VERSION
 
-version 0.000001
+version 0.000002
 
 ## stringify(\[$indent\])
 
