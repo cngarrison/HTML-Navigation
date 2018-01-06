@@ -14,7 +14,7 @@ sub BUILD {
 	my ( $self, $args ) = @_;
 	foreach my $kid ( @{ $args->{children} } ) {
 		$kid->{no_sorting} = $self->no_sorting;
-		$kid->{parent}     = $self; ## Need to set parent before ->new so that ->parent->mak_active will work
+		$kid->{parent}     = $self; ## Need to set parent before ->new so that ->parent->make_active will work
 		$self->insert_child( HTML::Navigation::Item->new($kid) );
 	}
 } ## end sub BUILD
